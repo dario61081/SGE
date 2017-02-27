@@ -1,0 +1,86 @@
+$theme_2 : rgb(0, 133, 242);
+
+.ui.menu {
+  border-radius: 0;
+  margin: 0;
+  background: $theme_2; // linear-gradient(to top, silver 20%, gainsboro);
+  height: 50px;
+  & .item {
+    background: transparent;
+    color:white;
+
+    &:hover {
+      background: whitesmoke;
+      transition: all 600ms;
+    }
+  }
+}
+
+.toolbar{
+  height: 3em;
+  line-height: 3em;
+  width: 100%;
+  background: lighten($theme_2,10);
+  color: white;
+  margin-bottom: 1em;
+  & .header {
+    font-weight: bold;
+    margin: 0 15px 0 17px;
+    width: 275px;
+    display: inline-block;
+    //border-right: darken($theme_2,10) dotted 1px;
+    padding-right: 15px;
+  }
+
+
+  & .item{
+    display: inline-block;
+    border-right: darken($theme_2,10) dotted 1px;
+    padding-right: 5px;
+    &.right {
+      float: right;
+    }
+
+  }
+}
+
+table.ui.table {
+  width: 100%;
+
+  & tbody tr:hover {
+    background: lighten($theme_2, 30);
+    cursor: pointer;
+  }
+  & thead > tr > th {
+    background: linear-gradient(to top, $theme_2, lighten($theme_2,10));
+    color: white;
+    text-align: center;
+  }
+
+  & thead tr th:not(:last-child), & tbody tr td:not(:last-child) {
+    border-right:silver dotted 1px;
+  }
+  & tbody > tr {
+    height: 2em;
+  }
+  & tbody> tr> td {
+    padding: 2px;
+  }
+
+}
+
+/*ajuste margen para iconos*/
+.button {
+  & i {
+    margin-right: 3px;
+  }
+}
+/*texto en mudo*/
+.text-muted {
+  color: darkgrey;
+  text-shadow: white 1px 1px 1px;
+}
+
+i {
+  margin-right: 3px;
+}
